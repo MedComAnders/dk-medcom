@@ -10,6 +10,12 @@ The implementation guide contains profiles in three areas
 The profiles are in general made open for additional content to allow further profiling for specific purposes defined by the communicating parties.
 __Note:__ We intend to split the implementation guide into three separate packages in a future version.
 
+For description regarding the transportation layer please refer to this guide:
+English:
+TBD
+Danish:
+* [ MedComs FHIR-meddelelser og forsendelseskuvert 1.0 ](./pdf/MedComs_FHIR-meddelelser_og_forsendelseskuvert_1.0.pdf)
+
 ### General Messaging Model
 The general messaging model containS the basic messaging template, which all messages (including acknowledgement messages) will comply with. The following diagram depicts the structure of a message.
 
@@ -65,7 +71,7 @@ The hospital notification message encounter contains the main content of the mes
 
 English:
 * [HosptialNotification Use Cases](./hospitalnotification/pdf/Use%20cases_Hospital%20Notification_eng.pdf)
-* [Non-technical guidelines for HospitalNotification](./hospitalnotification/pdf/FHIR_Hospital%20Notification.pdf)
+* [Non-technical guidelines for HospitalNotification](./hospitalnotification/pdf/FHIR_Hospital_Notification.pdf)
 
 Danish:
 * [HospitalNotification Use Cases](./hospitalnotification/pdf/Use_cases_advis_om_sygehusophold.pdf)
@@ -90,14 +96,6 @@ The care communication message header constrains the messaging message header fu
 #### MedComCareCommunication
 The care communication contains the main content of the message. It constrains the communication to the categories given in the MedComCareCommunicationCategories values and the priority to be either routine or ASAP. An optional title of the message is given in the topic of the communication. Care communication must contain an lpr3 encounter if an lpr3 identifier is known. The payload of the message is either text fragments or attachments, each given with a timestamp and an author. It is allowed to add a sender and/or recipient that is more precise than the sender and destination organizations given in the message header.
 
-### MedCom Acknowledgment Message
-
-#### MedComAcknowledgmentMessage
-A Message Acknowledgment is required in MedCom FHIR Messaging and follows the recommandations from HL7 FHIR ValueSet [response-code](http://hl7.org/fhir/R4/valueset-response-code.html "response-code").
-
-#### MedComAcknowledgmentMessageHeader
-Message Acknowledgment is handled through the response element in the MedComAcknowledgmentMessageHeader.
-
 #### Information regarding non-technical guide lines and use cases for CareCommunication is found here:
 
 English:
@@ -107,6 +105,14 @@ English:
 Danish:
 * [CareCommunication Use Cases](./carecommunication/pdf/Use%20Cases_FHIR%20Korrespondancemeddelelse.pdf)
 * [Non-technical guidelines for CareCommunication](./carecommunication/pdf/FHIR_Korrespondancemeddelelse.pdf)
+
+### MedCom Acknowledgment Message
+
+#### MedComAcknowledgmentMessage
+A Message Acknowledgment is required in MedCom FHIR Messaging and follows the recommandations from HL7 FHIR ValueSet [response-code](http://hl7.org/fhir/R4/valueset-response-code.html "response-code").
+
+#### MedComAcknowledgmentMessageHeader
+Message Acknowledgment is handled through the response element in the MedComAcknowledgmentMessageHeader.
 
 ### Genenal references
 
